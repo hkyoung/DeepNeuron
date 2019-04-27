@@ -43,7 +43,7 @@ def main():
     # Now we pass 'traces' to the efel and ask it to calculate the feature
     # values
     traces_results = efel.getFeatureValues(traces,
-                                           ['mean_frequency', 'adaptation_index', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width'])
+                                           ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width'])
 
     # The return value is a list of trace_results, every trace_results
     # corresponds to one trace in the 'traces' list above (in same order)
@@ -53,8 +53,8 @@ def main():
             print ("Feature %s has the following values: %s" % \
                 (feature_name, ', '.join([str(x) for x in feature_values])))
 
-    # for feature in efel.getFeatureNames():
-    #     print(feature)
+    for feature in efel.getFeatureNames():
+        print(feature)
 
 
 if __name__ == '__main__':

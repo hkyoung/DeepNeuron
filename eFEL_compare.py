@@ -7,6 +7,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
+# module load python/3.6-anaconda-4.4
+
 def read_data_hdf5(inpF):
         print('read data from hdf5:',inpF)
         h5f = h5py.File(inpF, 'r')
@@ -36,18 +38,50 @@ def main():
         trace['stim_end'] = [stim_end]
         traces += [trace]
 
-    traces_results = efel.getFeatureValues(traces, ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width'])
+    features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude']
+    # features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width']
+    traces_results = efel.getFeatureValues(traces, features)
     i = 0
+    feature_results = {}
+    feature_means = {}
+    feature_stds = {}
+    for feature in features:
+        feature_results[feature] = []
     for trace_results in traces_results:
         # trace_result is a dictionary, with as keys the requested features
-        print()
-        print('Trace', i)
-        i += 1
-        for feature_name, feature_values in trace_results.items():
-            print ("Feature %s has the following values: %s" % \
-                (feature_name, ', '.join([str(x) for x in feature_values])))
-        print()
 
+        for feature_name, feature_values in trace_results.items():
+            feature_results[feature_name] += [x for x in feature_values]
+
+        # print()
+        # print('Trace', i)
+        # i += 1
+        # for feature_name, feature_values in trace_results.items():
+        #     print ("Feature %s has the following values: %s" % \
+        #         (feature_name, ', '.join([str(x) for x in feature_values])))
+        # print()
+
+    for feature in features:
+        mean = np.mean(feature_results[feature])
+        std = np.std(feature_results[feature])
+        feature_means[feature] = mean
+        feature_stds[feature] = std
+        plt.figure(figsize=(20, 10))
+        # plt.hist(feature_results[feature], bins=20)
+        max_val = max(plt.hist(feature_results[feature], bins=20)[0])
+        plt.plot([mean - std, mean + std], [max_val/3, max_val/3], linewidth=4, label='std = ' + str(std))
+        plt.plot([mean, mean], [0, max_val], linewidth=4, label='mean = ' + str(mean))
+        plt.legend()
+        plt.ylabel('# of traces')
+        plt.title(feature)
+        plt.savefig('./plots/hist_' + feature)
+
+    # for tr1 in trace_results:
+    #     for tr2 in trace_results:
+    #         if tr1 == tr2:
+    #             continue
+    #         score = 0
+    #         for feature_name, feature_
 
     # for i in range(len(A_2['sweep2D'])):
     #     plt.figure(figsize=(20, 10))
