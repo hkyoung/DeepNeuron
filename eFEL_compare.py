@@ -66,22 +66,40 @@ def main():
         std = np.std(feature_results[feature])
         feature_means[feature] = mean
         feature_stds[feature] = std
-        plt.figure(figsize=(20, 10))
-        # plt.hist(feature_results[feature], bins=20)
-        max_val = max(plt.hist(feature_results[feature], bins=20)[0])
-        plt.plot([mean - std, mean + std], [max_val/3, max_val/3], linewidth=4, label='std = ' + str(std))
-        plt.plot([mean, mean], [0, max_val], linewidth=4, label='mean = ' + str(mean))
-        plt.legend()
-        plt.ylabel('# of traces')
-        plt.title(feature)
-        plt.savefig('./plots/hist_' + feature)
+        # plt.figure(figsize=(20, 10))
+        # max_val = max(plt.hist(feature_results[feature], bins=20)[0])
+        # plt.plot([mean - std, mean + std], [max_val/3, max_val/3], linewidth=4, label='std = ' + str(std))
+        # plt.plot([mean, mean], [0, max_val], linewidth=4, label='mean = ' + str(mean))
+        # plt.legend()
+        # plt.ylabel('# of traces')
+        # plt.title(feature)
+        # plt.savefig('./plots/hist_' + feature)
 
-    # for tr1 in trace_results:
-    #     for tr2 in trace_results:
-    #         if tr1 == tr2:
-    #             continue
-    #         score = 0
-    #         for feature_name, feature_
+
+    score_distr = []
+
+    for i in range(len(traces_results) - 1):
+        for j in range(i + 1, len(traces_results)):
+            tr1, tr2 = traces_results[i], traces_results[j]
+            score = 0
+            for feature in tr1.keys():
+                tr1_feature_val = tr1[feature][0]
+                tr2_feature_val = tr2[feature][0]
+                score += ((tr1_feature_val - tr2_feature_val)**2)/feature_stds[feature]
+            # print((score))
+            score_distr.append(score)
+    score_mean = np.mean(score_distr)
+    score_std = np.std(score_distr)
+    print(max(score_distr))
+    plt.figure(figsize=(20,10))
+    max_bin = max(plt.hist(score_distr, bins=20)[0])
+    plt.plot([score_mean - std, score_mean + std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(score_std))
+    plt.plot([score_mean, score_mean], [0, max_bin], linewidth=4, label='mean = ' + str(score_mean))
+    plt.legend()
+    plt.ylabel('# of scores')
+    plt.xlabel('chi square score')
+    plt.plot()
+    plt.savefig('./plots/scores_hist')
 
     # for i in range(len(A_2['sweep2D'])):
     #     plt.figure(figsize=(20, 10))
