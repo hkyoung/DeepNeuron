@@ -6,6 +6,7 @@ from numpy import genfromtxt
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+import os
 
 # module load python/3.6-anaconda-4.4
 
@@ -22,15 +23,19 @@ def read_data_hdf5(inpF):
         return objD
 
 def main():
-    A_2 = read_data_hdf5('/project/projectdirs/mpccc/balewski/roy-neuron-sim-data/experiment_2019-04-10/packed/041019A_2.exp.h5')
-
-    efel_time = [0.02*i for i in range(len(A_2['stim']))]
+    # A_2 = read_data_hdf5('/project/projectdirs/mpccc/balewski/roy-neuron-sim-data/experiment_2019-04-10/packed/041019A_2.exp.h5')
+    mainen_path = '/project/projectdirs/mpccc/balewski/roy-neuron-sim-data/paper1/april25_pred/mainen_4pv29-ML693-mainen_4PV29/'
+    A_2_path = '/project/projectdirs/mpccc/balewski/roy-neuron-sim-data/experiment_2019-04-10/packed/'
+    files = os.listdir(mainen_path + '15/')
+    print(files)
+    main4_orig = read_data_hdf5(mainen_path + files[0] + '.h5')
+    # efel_time = [0.02*i for i in range(len(A_2['stim']))]
 
     traces = []
     stim_start = 5
     stim_end = 150
 
-    for i in range(len(A_2['sweep2D'])):
+    for i in range(len(main4_orig['sweep2D'])):
         trace = {}
         trace['T'] = efel_time
         trace['V'] = A_2['sweep2D'][i]
@@ -53,13 +58,13 @@ def main():
         for feature_name, feature_values in trace_results.items():
             feature_results[feature_name] += [x for x in feature_values]
 
-        # print()
-        # print('Trace', i)
-        # i += 1
-        # for feature_name, feature_values in trace_results.items():
-        #     print ("Feature %s has the following values: %s" % \
-        #         (feature_name, ', '.join([str(x) for x in feature_values])))
-        # print()
+        print()
+        print('Trace', i)
+        i += 1
+        for feature_name, feature_values in trace_results.items():
+            print ("Feature %s has the following values: %s" % \
+                (feature_name, ', '.join([str(x) for x in feature_values])))
+        print()
 
     for feature in features:
         mean = np.mean(feature_results[feature])
@@ -76,30 +81,30 @@ def main():
         # plt.savefig('./plots/hist_' + feature)
 
 
-    score_distr = []
-
-    for i in range(len(traces_results) - 1):
-        for j in range(i + 1, len(traces_results)):
-            tr1, tr2 = traces_results[i], traces_results[j]
-            score = 0
-            for feature in tr1.keys():
-                tr1_feature_val = tr1[feature][0]
-                tr2_feature_val = tr2[feature][0]
-                score += ((tr1_feature_val - tr2_feature_val)**2)/feature_stds[feature]
-            # print((score))
-            score_distr.append(score)
-    score_mean = np.mean(score_distr)
-    score_std = np.std(score_distr)
-    print(max(score_distr))
-    plt.figure(figsize=(20,10))
-    max_bin = max(plt.hist(score_distr, bins=20)[0])
-    plt.plot([score_mean - std, score_mean + std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(score_std))
-    plt.plot([score_mean, score_mean], [0, max_bin], linewidth=4, label='mean = ' + str(score_mean))
-    plt.legend()
-    plt.ylabel('# of scores')
-    plt.xlabel('chi square score')
-    plt.plot()
-    plt.savefig('./plots/scores_hist')
+    # score_distr = []
+    #
+    # for i in range(len(traces_results) - 1):
+    #     for j in range(i + 1, len(traces_results)):
+    #         tr1, tr2 = traces_results[i], traces_results[j]
+    #         score = 0
+    #         for feature in tr1.keys():
+    #             tr1_feature_val = tr1[feature][0]
+    #             tr2_feature_val = tr2[feature][0]
+    #             score += ((tr1_feature_val - tr2_feature_val)**2)/feature_stds[feature]
+    #         # print((score))
+    #         score_distr.append(score)
+    # score_mean = np.mean(score_distr)
+    # score_std = np.std(score_distr)
+    # print(max(score_distr))
+    # plt.figure(figsize=(20,10))
+    # max_bin = max(plt.hist(score_distr, bins=20)[0])
+    # plt.plot([score_mean - std, score_mean + std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(score_std))
+    # plt.plot([score_mean, score_mean], [0, max_bin], linewidth=4, label='mean = ' + str(score_mean))
+    # plt.legend()
+    # plt.ylabel('# of scores')
+    # plt.xlabel('chi square score')
+    # plt.plot()
+    # plt.savefig('./plots/scores_hist')
 
     # for i in range(len(A_2['sweep2D'])):
     #     plt.figure(figsize=(20, 10))
