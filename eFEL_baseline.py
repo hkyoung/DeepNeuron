@@ -1,0 +1,122 @@
+import bluepyopt
+import efel
+import h5py
+import numpy as np
+from numpy import genfromtxt
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import os
+import time
+
+# Terminal Commands
+# salloc -N 1 -q debug -C haswell -t 00:30:00 -L SCRATCH
+# salloc -N 1 -q interactive -C haswell -t 03:00:00 -L SCRATCH
+# After successfully allocating nodes, enter these lines in terminal before running script
+# module load python/3.6-anaconda-4.4
+# export HDF5_USE_FILE_LOCKING=FALSE
+
+def read_data_hdf5(inpF):
+    print('read data from hdf5:',inpF)
+    h5f = h5py.File(inpF, 'r')
+    objD={}
+    for x in h5f.keys():
+        obj=h5f[x][:]
+        print('read ',x,obj.shape)
+        objD[x]=obj
+
+    h5f.close()
+    return objD
+
+def extract_features(traces, features):
+    #extract eFEL features for each trace
+    #input: traces=list of traces, features=list of eFEL feature names
+    #output: traces_results=list of dictionaries (feature->values) for each trace (a dictionary for each trace)
+    time_arr = [0.02*i for i in range(len(traces[0]))]
+    stim_start = 1
+    stim_end = 179
+
+    traces_dicts = []
+    for t in traces:
+        trace = {}
+        trace['T'] = time_arr
+        trace['V'] = t
+        trace['stim_start'] = [stim_start]
+        trace['stim_end'] = [stim_end]
+        traces_dicts += [trace]
+    print('traces_dicts created')
+
+    start = time.time()
+    traces_results = efel.getFeatureValues(traces_dicts, features)
+    end = time.time()
+    print('Feature extraction runtime (min):', end - start / 60)
+
+    return traces_results
+
+def organize_features(traces_results, features):
+    #combine the ouputted dictionaries from extract_features organized by feature as keys
+    #input: traces_results=list of dictionaries (feature->values) for each trace, features=list of eFEL feature names
+    #output: features_results=dictionary (feature->list of values for each trace)
+    features_results = {}
+    for feature in features:
+        features_results[feature] = []
+    for trace_results in traces_results:
+        for feature, feature_values in trace_results.items():
+            features_results[feature] += [[x for x in feature_values]]
+    return features_results
+
+def compare_features(features_results, features, comps_path, plots_path):
+    #for each feature, compute the difference of feature values between two consecutive traces
+    #input: features_results=dictionary (feature->list of values for each trace), features=list of eFEL feature names
+    #output: N/A
+    #saved files: comparisons (list of differences of consec. traces), plot of distribution of differences
+    units_dict = {}
+    units_dict['mean_frequency'] = 'Hz'
+    units_dict['time_to_first_spike'] = 'ms'
+    units_dict['mean_AP_amplitude'] = 'mV'
+    units_dict['AHP_depth'] = 'mV'
+    units_dict['spike_half_width'] = 'mV'
+    for feature in features:
+        comp = [np.mean(features_results[feature][i]) - np.mean(features_results[feature][i + 1]) for i in range(0, len(features_results[feature]), 2)]
+        print(feature, len(comp))
+        np.savetxt(comps_path + feature + '.csv', comp, delimiter = ' ')
+        comp_mean = np.mean(comp)
+        comp_std = np.std(comp)
+        plt.figure(figsize=(20,10))
+        max_bin = max(plt.hist(comp, bins=50)[0])
+        plt.plot([comp_mean - comp_std, comp_mean + comp_std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(comp_std))
+        plt.plot([comp_mean, comp_mean], [0, max_bin], linewidth=4, label='mean = ' + str(comp_mean))
+        plt.legend()
+        plt.ylabel('# of traces')
+        plt.xlabel('Difference ' + feature + units_dict[feature] + ')')
+        plt.title(feature)
+        plt.plot()
+        plt.savefig(plots_path + feature)
+
+def main():
+    dir_path = '/global/cscratch1/sd/asranjan/mainen4v29/data/'
+    features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width']
+    files = os.listdir(dir_path)
+    comps_path = './mainen/baseline/4p/comps/mcomp_'
+    plots_path = './mainen/baseline/4p/plots/mcomp_hist_'
+
+    num_traces = 10000
+    traces = []
+    i = 0
+    while len(traces) < num_traces:
+        if '.h5' in files[i]:
+            h5 = read_data_hdf5(dir_path + files[i])
+            traces += [v[5500:14500] for v in h5['voltages']]
+            print(len(traces))
+        i += 1
+    traces = traces[:num_traces]
+    print('final number of traces:', len(traces))
+    traces_results = extract_features(traces, features)
+    features_results = organize_features(traces_results, features)
+    print([len(features_results[feature]) for feature in features])
+    compare_features(features_results, features, comps_path, plots_path)
+
+
+
+if __name__ == '__main__':
+    main()
