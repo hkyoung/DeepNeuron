@@ -13,10 +13,26 @@ import os
 # module load python/3.6-anaconda-4.4
 # export HDF5_USE_FILE_LOCKING=FALSE
 
-path= '/global/cscratch1/sd/vbaratha/izhi/32traces/'
-files = os.listdir(path)
-print(files)
+def read_data_hdf5(inpF):
+        print('read data from hdf5:',inpF)
+        h5f = h5py.File(inpF, 'r')
+        objD={}
+        for x in h5f.keys():
+            obj=h5f[x][:]
+            print('read ',x,obj.shape)
+            objD[x]=obj
 
-for i in range(len(files)):
-    print(files[i])
-    h5 = read_data_hdf5(path + files[i])
+        h5f.close()
+        return objD
+
+# paths = ['/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_hard_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_7par_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_two_dend_10par_v2/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/izhi_v6c/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/']
+# for i in range(len(paths)):
+#     files = os.listdir(paths[i])
+#     print(paths[i])
+#     h5 = read_data_hdf5(paths[i] + files[0])
+#     print()
+path = '/global/cscratch1/sd/vbaratha/izhi/32traces/'
+files = os.listdir(path)
+for f in files:
+    h5 = read_data_hdf5(path + f)
+print(files)

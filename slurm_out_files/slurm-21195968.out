@@ -1,0 +1,173 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 0
+Argument List: []
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_10chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+512
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_15chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+1024
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_236chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+1536
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_48chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+2048
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_103chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+2560
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_87chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+3072
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_8chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+3584
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_33chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+4096
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_39chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+4608
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_205chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+5120
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_138chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+5632
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_120chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+6144
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_217chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+6656
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_211chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+7168
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_147chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+7680
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_27chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+8192
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_82chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+8704
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_179chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+9216
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_66chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+9728
+read data from hdf5: /global/cscratch1/sd/asranjan/mainen4v29/data/mainen_4paramsv29_512_237chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+10240
+final number of traces: 10000
+traces_dicts created
+Feature extraction runtime (min): 1531318160.4941063
+[10000, 10000, 10000, 10000, 10000]
+mean_frequency 5000
+time_to_first_spike 5000
+mean_AP_amplitude 5000
+AHP_depth 5000
+spike_half_width 5000

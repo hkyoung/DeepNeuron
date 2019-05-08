@@ -51,8 +51,7 @@ def extract_features(traces, features):
     start = time.time()
     traces_results = efel.getFeatureValues(traces_dicts, features)
     end = time.time()
-    time_taken = (end - start) / 60
-    print('Feature extraction runtime (min):', time_taken)
+    print('Feature extraction runtime (min):', end - start / 60)
 
     return traces_results
 
@@ -86,12 +85,12 @@ def compare_features(features_results, features, comps_path, plots_path):
         comp_mean = np.mean(comp)
         comp_std = np.std(comp)
         plt.figure(figsize=(20,10))
-        max_bin = max(plt.hist(comp, bins=100)[0])
+        max_bin = max(plt.hist(comp, bins=50)[0])
         plt.plot([comp_mean - comp_std, comp_mean + comp_std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(comp_std))
         plt.plot([comp_mean, comp_mean], [0, max_bin], linewidth=4, label='mean = ' + str(comp_mean))
         plt.legend()
         plt.ylabel('# of traces')
-        plt.xlabel('Difference ' + feature + ' (' + units_dict[feature] + ')')
+        plt.xlabel('Difference ' + feature + units_dict[feature] + ')')
         plt.title(feature)
         plt.plot()
         plt.savefig(plots_path + feature)
@@ -100,30 +99,13 @@ def main():
     print ('Number of arguments:', len(sys.argv)-1)
     print ('Argument List:', str(sys.argv[1:]))
 
-    assert len(sys.argv)==2
-    if sys.argv[1]=='hh_4p_easy':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/'
-    elif sys.argv[1]=='hh_4p_hard':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_hard_v3/raw/'
-    elif sys.argv[1]=='hh_7p':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_7par_v3/raw/'
-    elif sys.argv[1]=='hh_10p':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_two_dend_10par_v2/raw/'
-    elif sys.argv[1]=='izhi':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/izhi_v6c/raw/'
-    elif sys.argv[1]=='mainen_4p':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/'
-    elif sys.argv[1]=='mainen_7p':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/'
-    elif sys.argv[1]=='mainen_10p':
-        dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/'
+    dir_path = '/global/cscratch1/sd/asranjan/mainen4v29/data/'
     features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width']
     files = os.listdir(dir_path)
-    model_name = sys.argv[1]
-    comps_path = './baseline/' + model_name + '/comps/mcomp_'
-    plots_path = './baseline/' + model_name + '/plots/mcomp_hist_'
+    comps_path = './mainen/baseline/4p/comps/mcomp_'
+    plots_path = './mainen/baseline/4p/plots/mcomp_hist_'
 
-    num_traces = 1000
+    num_traces = 10000
     traces = []
     i = 0
     while len(traces) < num_traces:

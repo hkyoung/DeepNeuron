@@ -1,0 +1,61 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['hh_4p_easy']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/hh_ball_stick_4param_easy_v3_1.h5
+read  binQA (50000,)
+read  norm_par (50000, 9)
+read  phys_par (50000, 9)
+read  phys_par_range (9, 2)
+read  stim (23000,)
+read  voltages (50000, 23000)
+50000
+final number of traces: 1000
+traces_dicts created
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_AP_amplitude: AP_amplitude: More peak_voltage entries during the stimulus than AP_begin_indices entries
+Feature [AP_amplitude] is missing
+Error calculating AP_amplitude for mean_AP_amplitude
+  RuntimeWarning)
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_frequency: 
+Voltage never goes below or above threshold in spike detection.
+
+  RuntimeWarning)
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature time_to_first_spike: 
+ One spike required for time_to_first_spike.
+
+  RuntimeWarning)
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_AP_amplitude: 
+ At least one spike required for calculation of min_AHP_indices.
+
+Feature [min_AHP_indices] is missing
+
+Feature [peak_voltage] is missing
+AP_amplitude: Error calculating peak_voltage
+Feature [AP_amplitude] is missing
+Error calculating AP_amplitude for mean_AP_amplitude
+  RuntimeWarning)
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature AHP_depth: 
+ At least one spike required for calculation of min_AHP_indices.
+
+Feature [min_AHP_values] is missing
+
+  RuntimeWarning)
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature spike_half_width: 
+ At least one spike required for calculation of min_AHP_indices.
+
+Feature [min_AHP_indices] is missing
+
+  RuntimeWarning)
+Feature extraction runtime (min): 0.3450796643892924
+Traceback (most recent call last):
+  File "./eFEL_baseline.py", line 145, in <module>
+    main()
+  File "./eFEL_baseline.py", line 138, in main
+    features_results = organize_features(traces_results, features)
+  File "./eFEL_baseline.py", line 68, in organize_features
+    features_results[feature] += [[x for x in feature_values]]
+TypeError: 'NoneType' object is not iterable
+
+real	1m2.109s
+user	0m19.980s
+sys	0m6.228s

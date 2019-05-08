@@ -1,0 +1,39 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['mainen_10p']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/mainen_10paramsv32_512_1863chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+512
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/mainen_10paramsv32_512_2557chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+1024
+final number of traces: 1000
+traces_dicts created
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_AP_amplitude: AP_amplitude: More peak_voltage entries during the stimulus than AP_begin_indices entries
+Feature [AP_amplitude] is missing
+Error calculating AP_amplitude for mean_AP_amplitude
+  RuntimeWarning)
+Feature extraction runtime (min): 0.3444061597188314
+Traceback (most recent call last):
+  File "./eFEL_baseline.py", line 145, in <module>
+    main()
+  File "./eFEL_baseline.py", line 138, in main
+    features_results = organize_features(traces_results, features)
+  File "./eFEL_baseline.py", line 68, in organize_features
+    features_results[feature] += [[x for x in feature_values]]
+TypeError: 'NoneType' object is not iterable
+
+real	0m24.540s
+user	0m19.992s
+sys	0m1.264s
