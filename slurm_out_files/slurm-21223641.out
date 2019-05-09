@@ -1,0 +1,28 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['izhi']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/izhi_v6c/raw/izhi_v6c_chirp23a.h5
+read  norm_par (50000, 4)
+read  phys_par (50000, 4)
+read  phys_par_range (4, 2)
+read  qa (50000,)
+read  stim (23000,)
+read  voltages (50000, 23000)
+37503
+final number of traces: 37503
+traces_dicts created
+Traceback (most recent call last):
+  File "./eFEL_baseline.py", line 213, in <module>
+    main()
+  File "./eFEL_baseline.py", line 208, in main
+    compare(traces, features, comps_path, plots_path)
+  File "./eFEL_baseline.py", line 125, in compare
+    prelim_comp = [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features) for i in range(0, len(traces_dicts), 2)]
+  File "./eFEL_baseline.py", line 125, in <listcomp>
+    prelim_comp = [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features) for i in range(0, len(traces_dicts), 2)]
+IndexError: list index out of range
+
+real	13m21.919s
+user	12m13.820s
+sys	0m19.980s

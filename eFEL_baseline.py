@@ -79,13 +79,14 @@ def compare_features(features_results, features, comps_path, plots_path):
     units_dict['mean_AP_amplitude'] = 'mV'
     units_dict['AHP_depth'] = 'mV'
     units_dict['spike_half_width'] = 'mV'
+    fig, ax = plt.subplots(nrows=2, ncols=(len(features) // 2) + (len(features) % 2))
     for feature in features:
         comp = [np.mean(features_results[feature][i]) - np.mean(features_results[feature][i + 1]) for i in range(0, len(features_results[feature]), 2)]
+
         print(feature, len(comp))
         np.savetxt(comps_path + feature + '.csv', comp, delimiter = ' ')
         comp_mean = np.mean(comp)
         comp_std = np.std(comp)
-        plt.figure(figsize=(20,10))
         max_bin = max(plt.hist(comp, bins=100)[0])
         plt.plot([comp_mean - comp_std, comp_mean + comp_std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(comp_std))
         plt.plot([comp_mean, comp_mean], [0, max_bin], linewidth=4, label='mean = ' + str(comp_mean))
@@ -95,6 +96,63 @@ def compare_features(features_results, features, comps_path, plots_path):
         plt.title(feature)
         plt.plot()
         plt.savefig(plots_path + feature)
+
+def hist_RMS(comp):
+    return np.sqrt(np.sum([x**2 for x in comp])/len(comp))
+
+def compare(traces, features, comps_path, plots_path):
+    units_dict = {}
+    units_dict['mean_frequency'] = 'Hz'
+    units_dict['time_to_first_spike'] = 'ms'
+    units_dict['mean_AP_amplitude'] = 'mV'
+    units_dict['AHP_depth'] = 'mV'
+    units_dict['spike_half_width'] = 'mV'
+
+    time_arr = [0.02*i for i in range(len(traces[0]))]
+    stim_start = 1
+    stim_end = 179
+
+    traces_dicts = []
+    for t in traces:
+        trace = {}
+        trace['T'] = time_arr
+        trace['V'] = t
+        trace['stim_start'] = [stim_start]
+        trace['stim_end'] = [stim_end]
+        traces_dicts += [trace]
+    print('traces_dicts created')
+    fig, ax = plt.subplots(len(features), figsize=(20, 50))
+    prelim_comp = [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features) for i in range(0, len(traces_dicts), 2)]
+    i= 0
+    for feature in features:
+
+        comp = []
+        for diff in [x[i] for x in prelim_comp]:
+            if diff > -1000 and diff < 1000:
+                comp += [diff]
+        print(feature, len(comp))
+        np.savetxt(comps_path + feature + '.csv', comp, delimiter = ' ')
+        print('histogram RMS', hist_RMS(comp))
+        comp_mean = np.mean(comp)
+        comp_std = np.std(comp)
+        max_bin = max(ax[i].hist(comp, bins=100)[0])
+        ax[i].plot([comp_mean - comp_std, comp_mean + comp_std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(comp_std))
+        ax[i].plot([comp_mean, comp_mean], [0, max_bin], linewidth=4, label='mean = ' + str(comp_mean))
+        ax[i].legend()
+        ax[i].set(xlabel='Difference ' + feature + ' (' + units_dict[feature] + ')', ylabel='# of traces', title=feature)
+        i += 1
+    plt.plot()
+    plt.savefig(plots_path + 'histograms')
+
+def compute_eFEL_diff(trace1, trace2, features):
+    traces_results = efel.getFeatureValues([trace1, trace2], features)
+    comp = []
+    for feature in features:
+        try:
+            comp += [np.mean(traces_results[0][feature]) - np.mean(traces_results[1][feature])]
+        except Exception as e:
+            comp += [-9999]
+    return comp
 
 def main():
     print ('Number of arguments:', len(sys.argv)-1)
@@ -118,26 +176,38 @@ def main():
     elif sys.argv[1]=='mainen_10p':
         dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/'
     features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width']
+    # features = ['time_to_first_spike', 'AHP_depth']
     files = os.listdir(dir_path)
     model_name = sys.argv[1]
     comps_path = './baseline/' + model_name + '/comps/mcomp_'
     plots_path = './baseline/' + model_name + '/plots/mcomp_hist_'
 
-    num_traces = 1000
+    num_traces = 50000
     traces = []
-    i = 0
-    while len(traces) < num_traces:
-        if '.h5' in files[i]:
-            h5 = read_data_hdf5(dir_path + files[i])
-            traces += [v[5500:14500] for v in h5['voltages']]
+    index = 0
+    while len(traces) < num_traces and index < len(files):
+        if '.h5' in files[index]:
+            h5 = read_data_hdf5(dir_path + files[index])
+            prelim_traces = [v[5500:14500] for v in h5['voltages']]
+            for i in range(len(prelim_traces)):
+                if 'izhi' in dir_path:
+                    if h5['qa'][i] == 1:
+                        traces += [prelim_traces[i]]
+                else:
+                    if h5['binQA'][i] == 1:
+                        traces += [prelim_traces[i]]
             print(len(traces))
-        i += 1
+        index += 1
     traces = traces[:num_traces]
+    if len(traces) % 2 == 1:
+        traces = traces[:-1]
     print('final number of traces:', len(traces))
-    traces_results = extract_features(traces, features)
-    features_results = organize_features(traces_results, features)
-    print([len(features_results[feature]) for feature in features])
-    compare_features(features_results, features, comps_path, plots_path)
+    # traces_results = extract_features(traces, features)
+    # features_results = organize_features(traces_results, features)
+    # print([len(features_results[feature]) for feature in features])
+    # compare_features(features_results, features, comps_path, plots_path)
+
+    compare(traces, features, comps_path, plots_path)
 
 
 

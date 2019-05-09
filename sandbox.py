@@ -25,14 +25,24 @@ def read_data_hdf5(inpF):
         h5f.close()
         return objD
 
-# paths = ['/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_hard_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_7par_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_two_dend_10par_v2/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/izhi_v6c/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/']
-# for i in range(len(paths)):
-#     files = os.listdir(paths[i])
-#     print(paths[i])
-#     h5 = read_data_hdf5(paths[i] + files[0])
-#     print()
-path = '/global/cscratch1/sd/vbaratha/izhi/32traces/'
-files = os.listdir(path)
-for f in files:
-    h5 = read_data_hdf5(path + f)
-print(files)
+paths = ['/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_hard_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_7par_v3/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/hh_two_dend_10par_v2/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/izhi_v6c/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/', '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/']
+for i in range(len(paths)):
+    if 'izhi' in paths[i]:
+        files = os.listdir(paths[i])
+        print(files)
+        # h5 = read_data_hdf5(paths[i] + files[0])
+        # if 'izhi' in paths[i]:
+        #     print('qa', h5['qa'])
+        # else:
+        #     print('binQA', h5['binQA'])
+        print()
+# path = '/global/cscratch1/sd/vbaratha/izhi/32traces/'
+# files = os.listdir(path)
+# for f in files:
+#     h5 = read_data_hdf5(path + f)
+# print(files)
+
+comps = genfromtxt('/global/cscratch1/sd/kyoungh/NLeFEL/baseline/mainen_4p/comps/mcomp_spike_half_width.csv', delimiter=' ')
+for i in range(len(comps)):
+    if comps[i] < -1000:
+        print(i, comps[i])

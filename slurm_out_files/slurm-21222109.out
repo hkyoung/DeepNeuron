@@ -1,0 +1,944 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['mainen_7p']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_621chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+452
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_157chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+893
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_560chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+1316
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_617chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+1762
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1004chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+2202
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_760chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+2647
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1069chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+3096
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_627chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+3539
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_629chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+3986
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_234chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+4414
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_300chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+4852
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_606chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+5297
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_153chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+5741
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_532chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+6186
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_21chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+6625
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_259chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+7064
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_187chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+7502
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_966chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+7932
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_752chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+8374
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1049chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+8815
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_828chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+9263
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_295chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+9723
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1137chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+10162
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_188chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+10601
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_541chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+11027
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_568chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+11469
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_536chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+11899
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_662chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+12328
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_251chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+12778
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_660chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+13215
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_3chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+13665
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1016chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+14094
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1025chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+14536
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_582chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+14976
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_518chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+15424
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_548chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+15866
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_676chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+16308
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_370chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+16757
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_679chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+17200
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_312chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+17623
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_574chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+18048
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_766chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+18494
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_847chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+18940
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_642chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+19365
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_387chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+19802
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1139chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+20224
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_613chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+20665
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_494chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+21106
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_304chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+21541
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_98chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+21980
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_103chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+22413
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_214chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+22849
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_303chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+23294
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_915chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+23739
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_989chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+24180
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_700chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+24620
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_805chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+25054
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_252chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+25501
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1019chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+25942
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_177chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+26386
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1001chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+26822
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1104chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+27265
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1159chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+27679
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_791chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+28120
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_593chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+28560
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_218chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+28986
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_440chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+29425
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_238chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+29874
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1116chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+30322
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_995chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+30767
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_506chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+31204
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_292chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+31643
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_500chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+32076
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_958chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+32515
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_602chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+32953
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_764chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+33391
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_87chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+33833
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1011chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+34272
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_271chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+34711
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_746chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+35145
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_244chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+35582
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_142chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+36024
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1133chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+36477
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_636chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+36913
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_550chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+37352
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1003chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+37791
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_723chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+38228
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_713chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+38660
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1031chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+39098
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1041chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+39547
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_954chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+39980
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_504chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+40405
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_77chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+40843
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1092chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+41288
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_57chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+41721
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_19chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+42160
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_925chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+42593
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_908chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+43037
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_744chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+43477
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1151chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+43933
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_876chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+44377
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_605chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+44803
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_458chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+45237
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_353chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+45684
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_562chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+46115
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_956chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+46561
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_229chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+47006
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_810chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+47452
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_741chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+47898
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_1060chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+48318
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_216chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+48770
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_856chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+49214
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_52chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+49650
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/mainen_7paramsv31_512_796chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+50087
+final number of traces: 50000
+traces_dicts created
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_AP_amplitude: AP_amplitude: More peak_voltage entries during the stimulus than AP_begin_indices entries
+Feature [AP_amplitude] is missing
+Error calculating AP_amplitude for mean_AP_amplitude
+  RuntimeWarning)
+Traceback (most recent call last):
+  File "./eFEL_baseline.py", line 209, in <module>
+    main()
+  File "./eFEL_baseline.py", line 204, in main
+    compare(traces, features, comps_path, plots_path)
+  File "./eFEL_baseline.py", line 125, in compare
+    prelim_comp = [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features) for i in range(0, len(traces_dicts), 2)]
+  File "./eFEL_baseline.py", line 125, in <listcomp>
+    prelim_comp = [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features) for i in range(0, len(traces_dicts), 2)]
+  File "./eFEL_baseline.py", line 153, in compute_eFEL_diff
+    return [np.mean(traces_results[0][feature]) - np.mean(traces_results[1][feature]) for feature in features]
+  File "./eFEL_baseline.py", line 153, in <listcomp>
+    return [np.mean(traces_results[0][feature]) - np.mean(traces_results[1][feature]) for feature in features]
+  File "/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/numpy/core/fromnumeric.py", line 2957, in mean
+    out=out, **kwargs)
+  File "/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/numpy/core/_methods.py", line 82, in _mean
+    ret = ret / rcount
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+
+real	1m11.497s
+user	0m11.164s
+sys	0m24.072s

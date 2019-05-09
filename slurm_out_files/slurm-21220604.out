@@ -1,0 +1,44 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['mainen_4p']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/mainen_4paramsv29_512_10chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+418
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/mainen_4paramsv29_512_15chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+827
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_4par-v29/raw/mainen_4paramsv29_512_236chirp23a.h5
+read  binQA (512,)
+read  norm_par (512, 14)
+read  phys_par (512, 14)
+read  phys_par_range (14, 2)
+read  stim (23000,)
+read  voltages (512, 23000)
+1256
+final number of traces: 1000
+traces_dicts created
+mean_frequency 500
+histogram RMS 14.319229187872612
+time_to_first_spike 500
+histogram RMS 6.246310911250024
+mean_AP_amplitude 500
+histogram RMS 19.073951189626687
+AHP_depth 500
+histogram RMS 9.038760384262702
+spike_half_width 500
+histogram RMS 1.4499416342209617
+
+real	0m27.410s
+user	0m21.860s
+sys	0m1.492s

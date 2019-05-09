@@ -1,0 +1,28 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['izhi']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/izhi_v6c/raw/izhi_v6c_chirp23a.h5
+read  norm_par (50000, 4)
+read  phys_par (50000, 4)
+read  phys_par_range (4, 2)
+read  qa (50000,)
+read  stim (23000,)
+read  voltages (50000, 23000)
+37503
+final number of traces: 37502
+traces_dicts created
+mean_frequency 18751
+histogram RMS 58.512473935541664
+time_to_first_spike 18751
+histogram RMS 4.427799059550888
+mean_AP_amplitude 18751
+histogram RMS 9.788564282243776
+AHP_depth 18751
+histogram RMS 9.697637747546171
+spike_half_width 18751
+histogram RMS 0.07252596078576583
+
+real	13m41.794s
+user	12m15.248s
+sys	0m19.980s

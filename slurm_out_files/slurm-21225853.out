@@ -1,0 +1,33 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['hh_4p_hard']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_hard_v3/raw/hh_ball_stick_4param_hard_v3_1.h5
+read  binQA (50000,)
+read  norm_par (50000, 9)
+read  phys_par (50000, 9)
+read  phys_par_range (9, 2)
+read  stim (23000,)
+read  voltages (50000, 23000)
+50000
+final number of traces: 50000
+traces_dicts created
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_AP_amplitude: AP_amplitude: More peak_voltage entries during the stimulus than AP_begin_indices entries
+Feature [AP_amplitude] is missing
+Error calculating AP_amplitude for mean_AP_amplitude
+  RuntimeWarning)
+mean_frequency 25000
+Traceback (most recent call last):
+  File "./eFEL_baseline.py", line 215, in <module>
+    main()
+  File "./eFEL_baseline.py", line 210, in main
+    compare(traces, features, comps_path, plots_path)
+  File "./eFEL_baseline.py", line 134, in compare
+    np.savetxt(comps_path + feature + '.csv', comp, delimiter = ' ')
+  File "/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/numpy/lib/npyio.py", line 1307, in savetxt
+    open(fname, 'wt').close()
+FileNotFoundError: [Errno 2] No such file or directory: './baseline/hh_4p_hard/comps/mcomp_mean_frequency.csv'
+
+real	19m37.348s
+user	16m20.548s
+sys	0m25.840s

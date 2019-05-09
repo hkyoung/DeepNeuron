@@ -1,0 +1,40 @@
+/usr/common/software/python/3.6-anaconda-4.4/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Number of arguments: 1
+Argument List: ['hh_4p_easy']
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/hh_ball_stick_4param_easy_v3_1.h5
+read  binQA (50000,)
+read  norm_par (50000, 9)
+read  phys_par (50000, 9)
+read  phys_par_range (9, 2)
+read  stim (23000,)
+read  voltages (50000, 23000)
+37648
+read data from hdf5: /global/homes/b/balewski/prj/roy-neuron-sim-data/hh_ball_stick_4par_easy_v3/raw/hh_ball_stick_4param_easy_v3_0.h5
+read  binQA (50000,)
+read  norm_par (50000, 9)
+read  phys_par (50000, 9)
+read  phys_par_range (9, 2)
+read  stim (23000,)
+read  voltages (50000, 23000)
+75328
+final number of traces: 50000
+traces_dicts created
+/global/homes/k/kyoungh/.local/cori/3.6-anaconda-4.4/lib/python3.6/site-packages/efel/api.py:480: RuntimeWarning: Error while calculating feature mean_AP_amplitude: AP_amplitude: More peak_voltage entries during the stimulus than AP_begin_indices entries
+Feature [AP_amplitude] is missing
+Error calculating AP_amplitude for mean_AP_amplitude
+  RuntimeWarning)
+mean_frequency 25000
+histogram RMS 93.10268467874893
+time_to_first_spike 25000
+histogram RMS 8.113797532598523
+mean_AP_amplitude 16560
+histogram RMS 43.95332641074027
+AHP_depth 25000
+histogram RMS 30.99219226039153
+spike_half_width 24999
+histogram RMS 2.881754970262858
+
+real	20m34.727s
+user	16m32.660s
+sys	0m30.384s
