@@ -107,6 +107,7 @@ def compare(traces, features, comps_path, plots_path):
     units_dict['mean_AP_amplitude'] = 'mV'
     units_dict['AHP_depth'] = 'mV'
     units_dict['spike_half_width'] = 'mV'
+    units_dict['adaptation_index'] = ''
 
     time_arr = [0.02*i for i in range(len(traces[0]))]
     stim_start = 1
@@ -122,7 +123,10 @@ def compare(traces, features, comps_path, plots_path):
         traces_dicts += [trace]
     print('traces_dicts created')
     fig, ax = plt.subplots(len(features), figsize=(20, 50))
-    prelim_comp = [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features) for i in range(0, len(traces_dicts), 2)]
+    prelim_comp = []
+    for i in range(0, len(traces_dicts), 2):
+        # print('done with ', i, 'of ', len(traces_dicts))
+        prelim_comp += [compute_eFEL_diff(traces_dicts[i], traces_dicts[i+1], features)]
     i= 0
     for feature in features:
 
@@ -135,14 +139,14 @@ def compare(traces, features, comps_path, plots_path):
         print('histogram RMS', hist_RMS(comp))
         comp_mean = np.mean(comp)
         comp_std = np.std(comp)
-        max_bin = max(ax[i].hist(comp, bins=100)[0])
-        ax[i].plot([comp_mean - comp_std, comp_mean + comp_std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(comp_std))
-        ax[i].plot([comp_mean, comp_mean], [0, max_bin], linewidth=4, label='mean = ' + str(comp_mean))
-        ax[i].legend()
-        ax[i].set(xlabel='Difference ' + feature + ' (' + units_dict[feature] + ')', ylabel='# of traces', title=feature)
+        # max_bin = max(ax[i].hist(comp, bins=100)[0])
+        # ax[i].plot([comp_mean - comp_std, comp_mean + comp_std], [max_bin/3, max_bin/3], linewidth=4, label='std = ' + str(comp_std))
+        # ax[i].plot([comp_mean, comp_mean], [0, max_bin], linewidth=4, label='mean = ' + str(comp_mean))
+        # ax[i].legend()
+        # ax[i].set(xlabel='Difference ' + feature + ' (' + units_dict[feature] + ')', ylabel='# of traces', title=feature)
         i += 1
-    plt.plot()
-    plt.savefig(plots_path + 'histograms')
+    # plt.plot()
+    # plt.savefig(plots_path + 'histograms')
 
 def compute_eFEL_diff(trace1, trace2, features):
     traces_results = efel.getFeatureValues([trace1, trace2], features)
@@ -175,8 +179,9 @@ def main():
         dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_7par-v31/raw/'
     elif sys.argv[1]=='mainen_10p':
         dir_path = '/global/homes/b/balewski/prj/roy-neuron-sim-data/mainen_10par-v32/raw/'
-    features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width']
+    # features = ['mean_frequency', 'time_to_first_spike', 'mean_AP_amplitude', 'AHP_depth', 'spike_half_width']
     # features = ['time_to_first_spike', 'AHP_depth']
+    features = ['adaptation_index']
     files = os.listdir(dir_path)
     model_name = sys.argv[1]
     comps_path = './baseline/' + model_name + '/comps/mcomp_'
